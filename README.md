@@ -28,7 +28,7 @@ export DAPPIER_API_KEY="your-api-key-here"
 - `api_key` (Optional[str]): The API key used to interact with the Dappier APIs.
 
 ```python
-from langchain-dappier import DappierRetriever
+from langchain_dappier import DappierRetriever
 
 retriever = DappierRetriever(
     data_model_id="dm_01jagy9nqaeer9hxx8z1sk1jx6"

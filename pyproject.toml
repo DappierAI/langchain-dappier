@@ -22,6 +22,7 @@ disallow_untyped_defs = "True"
 python = ">=3.9,<4.0"
 langchain-core = "^0.3.15"
 dappier = "^0.2.10"
+httpx = "^0.28.1"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "T201"]

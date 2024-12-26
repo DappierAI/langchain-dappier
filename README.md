@@ -18,6 +18,15 @@ export DAPPIER_API_KEY="your-api-key-here"
 
 `DappierRetriever` class exposes chat models from Dappier.
 
+**Parameters:**
+
+- `data_model_id` (str): Data model ID, starting with `dm_`. You can find the available data model IDs at [Dappier marketplace](https://platform.dappier.com/marketplace).
+- `k` (int): Number of documents to return.
+- `ref` (Optional[str]): Site domain where AI recommendations are displayed.
+- `num_articles_ref` (int): Minimum number of articles from the specified `ref` domain. The rest will come from other sites within the RAG model.
+- `search_algorithm` (Literal["most_recent", "most_recent_semantic", "semantic", "trending"]): Search algorithm for retrieving articles.
+- `api_key` (Optional[str]): The API key used to interact with the Dappier APIs.
+
 ```python
 from langchain-dappier import DappierRetriever
 

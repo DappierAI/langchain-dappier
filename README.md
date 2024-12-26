@@ -10,6 +10,10 @@ pip install -U langchain-dappier
 
 And you should configure credentials by setting the following environment variables:
 
+```bash
+export DAPPIER_API_KEY="your-api-key-here"
+```
+
 ## Retrievers
 
 `DappierRetriever` class exposes chat models from Dappier.

@@ -3,6 +3,7 @@
 import os
 from typing import Any, List, Literal, Optional
 
+from dappier import Dappier, DappierAsync
 from langchain_core.callbacks.manager import (
     AsyncCallbackManagerForRetrieverRun,
     CallbackManagerForRetrieverRun,
@@ -127,13 +128,6 @@ class DappierRetriever(BaseRetriever):
             List of relevant documents
         """
         try:
-            from dappier import Dappier
-        except ImportError:
-            raise ImportError(
-                "Dappier python package not found."
-                "Please install it with `pip install dappier`"
-            )
-        try:
             if not self.data_model_id:
                 raise ValueError("Data model id is not initialized.")
             dp_client = Dappier(api_key=self.api_key or os.environ["DAPPIER_API_KEY"])
@@ -163,13 +157,6 @@ class DappierRetriever(BaseRetriever):
         Returns:
             List of relevant documents
         """
-        try:
-            from dappier import DappierAsync
-        except ImportError:
-            raise ImportError(
-                "Dappier python package not found."
-                "Please install it with `pip install dappier`."
-            )
         try:
             dp_client = DappierAsync(
                 api_key=self.api_key or os.environ["DAPPIER_API_KEY"]

@@ -60,19 +60,6 @@ astroid = ["astroid (>=2,<4)"]
 test = ["astroid (>=2,<4)", "pytest", "pytest-cov", "pytest-xdist"]
 
 [[package]]
-name = "asyncio"
-version = "3.4.3"
-description = "reference implementation of PEP 3156"
-optional = false
-python-versions = "*"
-files = [
-    {file = "asyncio-3.4.3-cp33-none-win32.whl", hash = "sha256:b62c9157d36187eca799c378e572c969f0da87cd5fc42ca372d92cdb06e7e1de"},
-    {file = "asyncio-3.4.3-cp33-none-win_amd64.whl", hash = "sha256:c46a87b48213d7464f22d9a497b9eef8c1928b68320a2fa94240f969f6fec08c"},
-    {file = "asyncio-3.4.3-py3-none-any.whl", hash = "sha256:c4d18b22701821de07bd6aea8b53d21449ec0ec5680645e5317062ea21817d2d"},
-    {file = "asyncio-3.4.3.tar.gz", hash = "sha256:83360ff8bc97980e4ff25c964c7bd3923d333d177aa4f7fb736b019f26c7cb41"},
-]
-
-[[package]]
 name = "certifi"
 version = "2024.12.14"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -320,23 +307,6 @@ traitlets = ">=4"
 
 [package.extras]
 test = ["pytest"]
-
-[[package]]
-name = "dappier"
-version = "0.2.10"
-description = "The Dappier Python SDK provides an easy-to-use interface for interacting with the Dappier API."
-optional = false
-python-versions = "<4.0,>=3.8.1"
-files = [
-    {file = "dappier-0.2.10-py3-none-any.whl", hash = "sha256:139c55c14228dd696a36d72f536765bd089c42563f52788ca601f2315802042c"},
-    {file = "dappier-0.2.10.tar.gz", hash = "sha256:32eb91b284346ef7aac800323fd260ffb5b66e8e496fc15f0465f3f875d4bc2a"},
-]
-
-[package.dependencies]
-asyncio = ">=3.4.3,<4.0.0"
-httpx = ">=0.28.1,<0.29.0"
-logging = ">=0.4.9.6,<0.5.0.0"
-pydantic = ">=2.10.3,<3.0.0"
 
 [[package]]
 name = "debugpy"
@@ -742,16 +712,6 @@ requests-toolbelt = ">=1.0.0,<2.0.0"
 
 [package.extras]
 langsmith-pyo3 = ["langsmith-pyo3 (>=0.1.0rc2,<0.2.0)"]
-
-[[package]]
-name = "logging"
-version = "0.4.9.6"
-description = "A logging module for Python"
-optional = false
-python-versions = "*"
-files = [
-    {file = "logging-0.4.9.6.tar.gz", hash = "sha256:26f6b50773f085042d301085bd1bf5d9f3735704db9f37c1ce6d8b85c38f2417"},
-]
 
 [[package]]
 name = "matplotlib-inline"
@@ -1936,4 +1896,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<4.0"
-content-hash = "718e82c018fa3a4f82d0b6ef2331f087be5b25d7886fde6a6de335876a88f294"
+content-hash = "5f833a2b68d63fec26082de8e7c20861364f7595337bc87f34f1db717969faab"

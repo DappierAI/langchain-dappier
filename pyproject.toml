@@ -21,7 +21,6 @@ disallow_untyped_defs = "True"
 [tool.poetry.dependencies]
 python = ">=3.9,<4.0"
 langchain-core = "^0.3.15"
-dappier = "^0.2.10"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "T201"]

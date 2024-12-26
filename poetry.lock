@@ -310,19 +310,18 @@ test = ["pytest"]
 
 [[package]]
 name = "dappier"
-version = "0.3.0"
+version = "0.3.1"
 description = "The Dappier Python SDK provides an easy-to-use interface for interacting with the Dappier API."
 optional = false
 python-versions = "<4.0,>=3.9"
 files = [
-    {file = "dappier-0.3.0-py3-none-any.whl", hash = "sha256:dce3a5d382b7a9f96276850c41b16c9d1c660fffa6192a89b5cf86c6dd0d6226"},
-    {file = "dappier-0.3.0.tar.gz", hash = "sha256:991d2f4726ff1224d8b1c125c751a6d6375d64560d751e043365b118a5b088c4"},
+    {file = "dappier-0.3.1-py3-none-any.whl", hash = "sha256:32a496a4e83d000d36da2c920ec7d0c9eab23ef19fa5cdb71dd4abca0b208847"},
+    {file = "dappier-0.3.1.tar.gz", hash = "sha256:ea43c299efbf14468f4b42bfd6324470cdb80c45f162ef376c5b391f92db3db5"},
 ]
 
 [package.dependencies]
 asyncio = ">=3.4.3,<4.0.0"
 httpx = ">=0.28.1,<0.29.0"
-logging = ">=0.4.9.6,<0.5.0.0"
 pydantic = ">=2.10.3,<3.0.0"
 
 [[package]]
@@ -730,16 +729,6 @@ requests-toolbelt = ">=1.0.0,<2.0.0"
 [package.extras]
 compression = ["zstandard (>=0.23.0,<0.24.0)"]
 langsmith-pyo3 = ["langsmith-pyo3 (>=0.1.0rc2,<0.2.0)"]
-
-[[package]]
-name = "logging"
-version = "0.4.9.6"
-description = "A logging module for Python"
-optional = false
-python-versions = "*"
-files = [
-    {file = "logging-0.4.9.6.tar.gz", hash = "sha256:26f6b50773f085042d301085bd1bf5d9f3735704db9f37c1ce6d8b85c38f2417"},
-]
 
 [[package]]
 name = "matplotlib-inline"
@@ -1924,4 +1913,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<4.0"
-content-hash = "393d43e22285f3b27a0e423548cfe88e6652ce8737e3acc97508a5487af91c2c"
+content-hash = "3888f9e31242d6e215faababff6fbd63e4017d344dd34e4103e181a7053aced6"

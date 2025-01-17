@@ -4,6 +4,7 @@ import os
 from typing import Dict, List, Literal, Optional, Type, Union
 
 from dappier import Dappier, DappierAsync
+from dappier.types import AIRecommendationsResponse
 from langchain_core.callbacks import (
     AsyncCallbackManagerForToolRun,
     CallbackManagerForToolRun,
@@ -285,22 +286,8 @@ class DappierAIRecommendationTool(BaseTool):  # type: ignore[override]
             if response is None or response.status != "success":
                 raise Exception("An unknown error occurred while retrieving the response.")
 
-            # Collect only relevant information from the response.
-            results = [
-                {
-                    "author": result.author,
-                    "image_url": result.image_url,
-                    "pubdate": result.pubdate,
-                    "source_url": result.source_url,
-                    "summary": result.summary,
-                    "title": result.title,
-                }
-                for result in (
-                    getattr(response.response, "results", None) or []
-                )
-            ]
-
-            return results
+            # Use the helper function to collect the relevant results
+            return self._collect_relevant_results(response)
 
         except Exception as e:
             raise Exception(f"Error while retrieving documents: {e}") from e
@@ -329,22 +316,24 @@ class DappierAIRecommendationTool(BaseTool):  # type: ignore[override]
                 if response is None or response.status != "success":
                     raise Exception("An unknown error occurred while retrieving the response.")
 
-                # Collect only relevant information from the response.
-                results = [
-                    {
-                        "author": result.author,
-                        "image_url": result.image_url,
-                        "pubdate": result.pubdate,
-                        "source_url": result.source_url,
-                        "summary": result.summary,
-                        "title": result.title,
-                    }
-                    for result in (
-                        getattr(response.response, "results", None) or []
-                    )
-                ]
-
-                return results
+                # Use the helper function to collect the relevant results
+                return self._collect_relevant_results(response)
 
         except Exception as e:
             raise Exception(f"Error while retrieving documents: {e}") from e
+        
+    def _collect_relevant_results(self, response: AIRecommendationsResponse) -> List[Dict[str, str]]:
+        """Collect only relevant information from the response."""
+        return [
+            {
+                "author": result.author,
+                "image_url": result.image_url,
+                "pubdate": result.pubdate,
+                "source_url": result.source_url,
+                "summary": result.summary,
+                "title": result.title,
+            }
+            for result in (
+                getattr(response.response, "results", None) or []
+            )
+        ]

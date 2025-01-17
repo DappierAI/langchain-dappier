@@ -26,4 +26,3 @@ env/
 venv/
 ENV/
 .DS_Store
-_tests

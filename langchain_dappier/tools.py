@@ -141,9 +141,9 @@ class DappierAIRecommendationTool(BaseTool):  # type: ignore[override]
     Instantiation:
         .. code-block:: python
 
-            from langchain_dappier import DappierRealTimeSearchTool
+            from langchain_dappier import DappierAIRecommendationTool
 
-            tool = DappierRealTimeSearchTool(
+            tool = DappierAIRecommendationTool(
                 data_model_id="dm_01j0pb465keqmatq9k83dthx34",
                 similarity_top_k=3,
                 ref="sportsnaut.com",
